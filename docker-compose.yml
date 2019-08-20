@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  env_checker:
+    build: ./app
+    volumes:
+      - /Users/antons/MyProjects/EnvChecker/app:/usr/src/app
+    ports:
+      - 5001:80
+
+  site:
+    image: ee03234aba1a
+    volumes:
+      - /Users/antons/MyProjects/EnvChecker/site:/var/www/html
+    ports:
+      - 5000:80
+    depends_on:
+      - env_checker
