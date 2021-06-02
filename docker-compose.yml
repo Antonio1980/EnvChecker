@@ -4,14 +4,14 @@ services:
   env_checker:
     build: ./app
     volumes:
-      - /Users/antons/MyProjects/EnvChecker/app:/usr/src/app
+      - /Users/antonshipulin/LOCAL/PyCharmProjects/EnvChecker/app:/usr/src/app
     ports:
       - 5001:80
 
   site:
-    image: ee03234aba1a
+    image: 38128dfb8fb2
     volumes:
-      - /Users/antons/MyProjects/EnvChecker/site:/var/www/html
+      - /Users/antonshipulin/LOCAL/PyCharmProjects/EnvChecker/site:/var/www/html
     ports:
       - 5000:80
     depends_on:
